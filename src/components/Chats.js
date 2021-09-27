@@ -1,6 +1,6 @@
 
 //import { CalculatorFilled } from "@ant-design/icons";
-import React, {useRef, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useHistory } from "react-router-dom";
 import { auth } from '../firebase';
 import {ChatEngine} from "react-chat-engine";
@@ -62,7 +62,7 @@ const Chats = ()=> {
         
                 })
         })
-    },[user, history]);
+    },[setLoading, user, history]);
 
     if(!user || loading)
         return 'Loading...'
